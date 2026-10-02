@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGO | Регистрация</title>
+    <link rel="stylesheet" href="ENERGO_yellow_black.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="left-panel">
+
+        <div class="logo">
+            <img src="c:\Users\2\Downloads\лого проекта данил.png" alt="Логотип" onerror="this.style.display='none'">
+        </div>
+
+        <h1 class="title">BLACK MESA</h1>
+
+        <div class="info-card">
+            <h2>О Организации</h2>
+            <p>
+                Алматинский Университет энергетики и внеземных технологий —
+                современное учебное заведение, готовящее специалистов
+                в области информационных технологий, энергетики,
+                электроники и других технических направлений.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2>Специальности</h2>
+            <ul>
+                <li>07130100 Электрооборудование</li>
+                <li>07130200 Электроснабжение</li>
+                <li>07130400 Теплотехническое оборудование и системы</li>
+                <li>07130500 Возобновляемая энергия</li>
+                <li>07140100 Автоматизация и управление</li>
+                <li>07140900 Радиотехника, электроника и телекоммуникации</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Где находится</h2>
+            <p>
+                Республика Казахстан<br>
+                г. Алматы<br>
+                ул. Жандосова, 65<br>
+                АУЭС имени Данила кириешки
+            </p>
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="container">
+
+          
+            <div class="form-block" id="formBlock">
+                <h2>Регистрация</h2>
+                <p class="subtitle">Создай аккаунт и присоединяйся к BLACK MESA</p>
+
+                <form id="registerForm" novalidate>
+
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Введите имя" autocomplete="name">
+                    <span class="error" id="nameError"></span>
+
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" placeholder="Введите email" autocomplete="email">
+                    <span class="error" id="emailError"></span>
+
+                    <label for="specialty">Специальность</label>
+                    <select id="specialty">
+                        <option value="" disabled selected>Выберите специальность</option>
+                        <option value="07130100">07130100 Электрооборудование</option>
+                        <option value="07130200">07130200 Электроснабжение</option>
+                        <option value="07130400">07130400 Теплотехническое оборудование и системы</option>
+                        <option value="07130500">07130500 Возобновляемая энергия</option>
+                        <option value="07140100">07140100 Автоматизация и управление</option>
+                        <option value="07140900">07140900 Радиотехника, электроника и телекоммуникации</option>
+                    </select>
+                    <span class="error" id="specialtyError"></span>
+
+                    <label for="password">Пароль</label>
+                    <div class="password-box">
+                        <input type="password" id="password" placeholder="Введите пароль" autocomplete="new-password">
+                        <button type="button" id="togglePassword">Показать</button>
+                    </div>
+                    <div class="strength-meter">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText"></div>
+                    <span class="error" id="passwordError"></span>
+
+                    <label for="confirmPassword">Повторите пароль</label>
+                    <div class="password-box">
+                        <input type="password" id="confirmPassword" placeholder="Повторите пароль" autocomplete="new-password">
+                        <button type="button" id="toggleConfirmPassword">Показать</button>
+                    </div>
+                    <span class="error" id="confirmPasswordError"></span>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">Я согласен с <a href="#" id="rulesLink">правилами сайта</a></label>
+                    </div>
+                    <span class="error" id="agreeError"></span>
+
+                    <button class="submit-btn" type="submit" id="submitBtn">
+                        <span class="btn-text">Зарегистрироваться</span>
+                        <span class="btn-loader"></span>
+                    </button>
+
+                </form>
+            </div>
+
+            
+            <div class="success-block" id="successBlock">
+                <div class="success-icon">✓</div>
+                <h2>Регистрация прошла успешно!</h2>
+                <p>
+                    Добро пожаловать в <strong>BLACK MESA</strong>.<br>
+                    Ваш аккаунт создан. Теперь вы можете войти в систему.
+                </p>
+                <button class="back-btn" id="backBtn">Вернуться к форме</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="rulesModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h3>Правила сайта</h3>
+        <div class="modal-body">
+            <p>1. Пользователь обязуется предоставлять достоверные данные при регистрации.</p>
+            <p>2. Запрещается использование чужих персональных данных.</p>
+            <p>3. Аккаунт может быть заблокирован при нарушении правил университета.</p>
+            <p>4. Администрация оставляет за собой право изменять правила без предварительного уведомления.</p>
+            <p>5. Все данные защищены и используются исключительно в учебных целях BLACK MESA.</p>
+        </div>
+        <button class="modal-ok" id="modalOk">Понятно</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
